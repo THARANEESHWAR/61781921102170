@@ -72,17 +72,93 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-Enhance my developer portfolio with advanced background animations.
 
-Requirements:
-- Add animated background particles or gradient waves.
-- Smooth scroll animations for sections (fade, slide, scale).
-- Glassmorphism effect for cards and navigation bar.
-- Hover animations for buttons and project cards.
-- Animated gradient background or moving blobs.
-- Micro-interactions when hovering links and buttons.
-- Use only HTML, CSS, and JavaScript.
-- Keep the design modern like Apple or Stripe websites.
-- Ensure animations are smooth and responsive.
 
-Update index.html, styles.css, and script.js.
+
+Create a premium, highly animated developer portfolio website. 
+You are free to use any modern technologies, libraries, or frameworks such as React, Three.js, GSAP, Framer Motion, WebGL, Tailwind, or any other tools that produce smooth high-end animations.
+
+The portfolio should look like a world-class developer website similar to Apple, Stripe, Webflow, or modern Web3 portfolios.
+
+The website must be extremely interactive, visually impressive, and performance optimized.
+
+STRUCTURE (Top to Bottom)
+
+1. Hero Section
+- Full screen animated background (particles, gradient waves, or 3D elements).
+- Large heading with my name.
+- Animated typing effect showing roles:
+  - Web Developer
+  - SAP UI5 Developer
+  - Frontend Developer
+- Smooth entrance animations.
+- Interactive glowing buttons: “View Projects” and “Contact Me”.
+- Subtle mouse-follow glow effect.
+
+2. About Me Section
+- Modern glassmorphism UI cards.
+- Smooth scroll reveal animations.
+- Floating elements or subtle parallax effect.
+- Short professional description about my experience in frontend development and SAP UI5.
+
+3. Skills Section
+- Animated skill cards with icons.
+- Hover interactions with glow effects.
+- Skill progress animations.
+- Technologies include:
+  HTML, CSS, JavaScript, React, SAP UI5, OData, Git, REST APIs.
+
+4. Education Section
+- Animated vertical timeline layout.
+- Each education item appears with slide-in animation.
+- Clean modern UI design.
+
+5. Projects Section
+- Grid layout with animated project cards.
+- Each card should include:
+  - Project title
+  - Description
+  - Tech stack
+  - GitHub or demo link
+- Cards should have 3D tilt hover effect.
+- Smooth hover animations and glowing borders.
+
+6. Experience Section
+- Clean timeline or card layout.
+- Scroll-triggered animations.
+
+7. Contact Section
+- Animated contact form.
+- Smooth input field animations.
+- Send button with hover interaction.
+
+8. Footer
+- Social icons (GitHub, LinkedIn, Email).
+- Subtle background animation.
+
+ANIMATION REQUIREMENTS
+
+- Use advanced animations such as:
+  - scroll-trigger animations
+  - parallax background
+  - floating elements
+  - particle effects
+  - glowing hover interactions
+  - glassmorphism UI
+  - gradient animations
+  - cursor effects
+
+PERFORMANCE
+
+- Animations must be smooth and optimized.
+- Ensure responsive design for desktop, tablet, and mobile.
+
+DESIGN STYLE
+
+- Dark modern UI
+- Glassmorphism and gradient effects
+- Futuristic developer aesthetic
+- Clean typography
+- Professional layout suitable for a developer portfolio
+
+Generate the full project structure and all required files.
