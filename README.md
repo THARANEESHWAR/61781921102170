@@ -75,90 +75,280 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-Create a premium, highly animated developer portfolio website. 
-You are free to use any modern technologies, libraries, or frameworks such as React, Three.js, GSAP, Framer Motion, WebGL, Tailwind, or any other tools that produce smooth high-end animations.
 
-The portfolio should look like a world-class developer website similar to Apple, Stripe, Webflow, or modern Web3 portfolios.
+You are a world-class creative developer.
 
-The website must be extremely interactive, visually impressive, and performance optimized.
+Create an award-winning futuristic developer portfolio for:
 
-STRUCTURE (Top to Bottom)
+Name: Tharaneeshwar S
 
-1. Hero Section
-- Full screen animated background (particles, gradient waves, or 3D elements).
-- Large heading with my name.
-- Animated typing effect showing roles:
-  - Web Developer
-  - SAP UI5 Developer
-  - Frontend Developer
-- Smooth entrance animations.
-- Interactive glowing buttons: “View Projects” and “Contact Me”.
-- Subtle mouse-follow glow effect.
+Role:
+SAP UI5 / Fiori Developer
+Frontend Developer
+Web Developer
 
-2. About Me Section
-- Modern glassmorphism UI cards.
-- Smooth scroll reveal animations.
-- Floating elements or subtle parallax effect.
-- Short professional description about my experience in frontend development and SAP UI5.
+Goal:
+Build one of the most visually impressive developer portfolios with cinematic animations, 3D graphics, and advanced UI interactions.
 
-3. Skills Section
-- Animated skill cards with icons.
-- Hover interactions with glow effects.
-- Skill progress animations.
-- Technologies include:
-  HTML, CSS, JavaScript, React, SAP UI5, OData, Git, REST APIs.
+You are free to use any modern technologies such as:
 
-4. Education Section
-- Animated vertical timeline layout.
-- Each education item appears with slide-in animation.
-- Clean modern UI design.
+React
+Next.js
+Three.js
+GSAP
+Framer Motion
+WebGL
+Shaders
+Canvas
+Particles.js
+Tailwind
+Vite
 
-5. Projects Section
-- Grid layout with animated project cards.
-- Each card should include:
-  - Project title
-  - Description
-  - Tech stack
-  - GitHub or demo link
-- Cards should have 3D tilt hover effect.
-- Smooth hover animations and glowing borders.
+The design should look like top Awwwards-winning websites.
 
-6. Experience Section
-- Clean timeline or card layout.
-- Scroll-triggered animations.
+------------------------------------------------
 
-7. Contact Section
-- Animated contact form.
-- Smooth input field animations.
-- Send button with hover interaction.
+GLOBAL DESIGN STYLE
 
-8. Footer
-- Social icons (GitHub, LinkedIn, Email).
-- Subtle background animation.
+Dark futuristic theme
+Neon blue and purple glow accents
+Glassmorphism UI
+3D lighting effects
+Parallax scrolling
+Smooth cinematic transitions
+Magnetic buttons
+Cursor glow effect
+Floating particles
+Gradient animations
 
-ANIMATION REQUIREMENTS
+------------------------------------------------
 
-- Use advanced animations such as:
-  - scroll-trigger animations
-  - parallax background
-  - floating elements
-  - particle effects
-  - glowing hover interactions
-  - glassmorphism UI
-  - gradient animations
-  - cursor effects
+HERO SECTION
+
+Full screen cinematic hero.
+
+Background:
+Interactive 3D particle universe using Three.js.
+
+Display:
+
+THARANEESHWAR S
+
+Tagline:
+Building practical, user-focused digital experiences.
+
+Typing animation:
+
+SAP UI5 Developer
+Frontend Developer
+Web Developer
+
+Add:
+
+mouse-follow glow
+floating UI elements
+magnetic buttons
+smooth entrance animations
+
+Buttons:
+
+View Projects
+Contact Me
+
+------------------------------------------------
+
+INSANE FEATURE – INTERACTIVE 3D GLOBE
+
+Create a rotating 3D globe using Three.js.
+
+The globe should show glowing markers representing my projects.
+
+Projects on globe:
+
+SAP UI5 Product Management Application
+Placement Pro
+Crime Reporting System
+AI Chatbot for Ministry of Coal
+
+When the user hovers over a marker:
+
+show project card
+display tech stack
+animate glow pulse
+
+Allow the user to rotate the globe with the mouse.
+
+------------------------------------------------
+
+ABOUT ME
+
+SAP UI5/Fiori Developer with hands-on experience developing custom SAP UI5 applications and integrating OData services. Skilled in MVC architecture, data binding, and SAP Fiori Launchpad configuration.
+
+Display as glassmorphism card with scroll reveal animation.
+
+------------------------------------------------
+
+PROFESSIONAL EXPERIENCE
+
+Capgemini Technology Services India Ltd.
+Senior Analyst
+July 2025 – Present
+
+Responsibilities:
+
+Developed custom SAP UI5 applications using MVC architecture.
+Integrated OData services via SAP Gateway with full CRUD operations.
+Developed responsive SAP UI5 applications following Fiori design principles.
+Worked with SAP Business Application Studio and SAP Web IDE.
+
+Display as animated timeline.
+
+------------------------------------------------
+
+SKILLS
+
+Programming Languages:
+Java
+JavaScript
+
+Web Technologies:
+HTML
+CSS
+React
+Node.js
+SAP UI5
+SAP Fiori
+
+SAP Technologies:
+SAP Gateway
+OData Services
+MVC Architecture
+JSON & OData Models
+Routing and Navigation
+Fiori Design Guidelines
+
+Databases:
+MySQL
+MongoDB
+NoSQL
+
+Tools:
+Git
+GitHub
+VS Code
+Eclipse
+
+Display skills as glowing animated tech cards.
+
+------------------------------------------------
+
+PROJECTS
+
+Create interactive animated project cards.
+
+Projects:
+
+SAP UI5 Product Management Application
+Placement Pro
+Crime Reporting System
+AI Chatbot for Ministry of Coal
+
+Each project card must include:
+
+project description
+technology stack
+GitHub link
+3D hover tilt animation
+glowing borders
+
+------------------------------------------------
+
+EDUCATION
+
+BE Computer Science and Engineering
+Sona College of Technology
+CGPA: 8.0
+
+HSC
+Model School Veerapandi
+75%
+
+SSLC
+Government Boys Higher Secondary School
+68%
+
+Display education timeline animation.
+
+------------------------------------------------
+
+INTERNSHIPS
+
+Infosys Springboard Internship
+RouteLogic – Smart Logistics Optimization
+Java Swing + MySQL routing system.
+
+Salesforce Virtual Internship
+Worked with Apex, Lightning Web Components, CRM automation.
+
+------------------------------------------------
+
+CERTIFICATIONS
+
+SAP UI5/Fiori Training – Capgemini
+Programming Using Java – Infosys Springboard
+Software Testing – NPTEL
+Full Stack Development – Udemy
+Artificial Intelligence Primer – Infosys Springboard
+
+------------------------------------------------
+
+ACHIEVEMENTS
+
+Best Conference Paper – Muscat College Oman
+Netball Cricket National Player
+Boxing Champion – Tamil Nadu Boxing Association
+Sports Scholarship – Government of Tamil Nadu
+
+------------------------------------------------
+
+CONTACT
+
+Phone:
++91 9003361228
+
+Email:
+stharaneeshwar@gmail.com
+
+GitHub:
+github.com/THARANEESHWAR
+
+LinkedIn:
+linkedin.com/in/tharaneeshwar
+
+Add animated contact form.
+
+------------------------------------------------
+
+ADVANCED ANIMATIONS
+
+Use:
+
+Three.js particle universe background
+interactive 3D globe
+scroll-trigger animations
+parallax background
+glassmorphism UI
+cursor glow
+magnetic buttons
+3D project cards
+gradient motion backgrounds
+smooth page transitions
+
+------------------------------------------------
 
 PERFORMANCE
 
-- Animations must be smooth and optimized.
-- Ensure responsive design for desktop, tablet, and mobile.
+Ensure animations are smooth and optimized.
+Make website responsive for mobile, tablet, and desktop.
 
-DESIGN STYLE
-
-- Dark modern UI
-- Glassmorphism and gradient effects
-- Futuristic developer aesthetic
-- Clean typography
-- Professional layout suitable for a developer portfolio
-
-Generate the full project structure and all required files.
+Generate the full project structure and all necessary files.
