@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+Enhance my developer portfolio with advanced background animations.
+
+Requirements:
+- Add animated background particles or gradient waves.
+- Smooth scroll animations for sections (fade, slide, scale).
+- Glassmorphism effect for cards and navigation bar.
+- Hover animations for buttons and project cards.
+- Animated gradient background or moving blobs.
+- Micro-interactions when hovering links and buttons.
+- Use only HTML, CSS, and JavaScript.
+- Keep the design modern like Apple or Stripe websites.
+- Ensure animations are smooth and responsive.
+
+Update index.html, styles.css, and script.js.
