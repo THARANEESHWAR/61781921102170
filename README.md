@@ -207,3 +207,54 @@ this.getView().setModel(oModel);
 
 });
 });
+
+
+
+
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:core="sap.ui.core">
+
+<Table items="{/employees}" mode="SingleSelectMaster">
+
+<headerToolbar>
+<Toolbar>
+<Title text="Employees"/>
+<ToolbarSpacer/>
+<Button text="Export CSV" press="onExport"/>
+</Toolbar>
+</headerToolbar>
+
+<columns>
+
+<Column>
+<Text text="Emp ID"/>
+</Column>
+
+<Column>
+<Text text="Name"/>
+</Column>
+
+<Column>
+<Text text="Department"/>
+</Column>
+
+</columns>
+
+<items>
+
+<ColumnListItem press="onRowPress">
+
+<cells>
+<Text text="{empId}"/>
+<Text text="{name}"/>
+<Text text="{department}"/>
+</cells>
+
+</ColumnListItem>
+
+</items>
+
+</Table>
+
+</core:FragmentDefinition>
