@@ -239,3 +239,95 @@ type="XML"/>
 </App>
 
 </mvc:View>
+
+app.controller.js
+
+
+sap.ui.define([
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator",
+    "sap/m/MessageToast"
+], function (Controller, JSONModel, Filter, FilterOperator, MessageToast) {
+    "use strict";
+
+    return Controller.extend("com.employee.employeeapp.controller.App", {
+
+        onInit: function () {
+
+            var oData = {
+                employees: [
+                    {
+                        empId: "101",
+                        name: "John",
+                        department: "IT",
+                        role: "Developer",
+                        email: "john@test.com"
+                    },
+                    {
+                        empId: "102",
+                        name: "David",
+                        department: "HR",
+                        role: "Manager",
+                        email: "david@test.com"
+                    },
+                    {
+                        empId: "103",
+                        name: "Sara",
+                        department: "Finance",
+                        role: "Analyst",
+                        email: "sara@test.com"
+                    }
+                ]
+            };
+
+            var oModel = new JSONModel(oData);
+            this.getView().setModel(oModel);
+
+        },
+
+        // 🔍 Search Filter
+        onSearch: function (oEvent) {
+
+            var sValue = oEvent.getSource().getValue();
+
+            var oFilter = new Filter(
+                "name",
+                FilterOperator.Contains,
+                sValue
+            );
+
+            var oTable = this.byId("employeeTable");
+            var oBinding = oTable.getBinding("items");
+
+            oBinding.filter([oFilter]);
+
+        },
+
+        // 📄 Export CSV Button
+        onExport: function () {
+
+            var oModel = this.getView().getModel();
+            var aData = oModel.getProperty("/employees");
+
+            console.log("Employee Data:", aData);
+
+            MessageToast.show("CSV Export Triggered");
+
+        },
+
+        // 👉 Row Click
+        onRowPress: function (oEvent) {
+
+            var empId = oEvent.getSource()
+                .getBindingContext()
+                .getProperty("empId");
+
+            MessageToast.show("Employee ID: " + empId);
+
+        }
+
+    });
+
+});
