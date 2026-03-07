@@ -331,3 +331,79 @@ sap.ui.define([
     });
 
 });
+
+
+
+
+You are an expert SAP UI5 and SAP Fiori developer.
+
+Create a complete SAPUI5 Freestyle application project structure that satisfies the following requirements.
+
+Project details:
+
+- Namespace: com.employee.employeeapp
+- Framework: SAPUI5
+- View Type: XML
+- Architecture: MVC
+- Use JSONModel for data
+- Follow SAPUI5 best practices and naming conventions
+
+Functional Requirements:
+
+1. Move JSON model creation into the controller (App.controller.js) and not inside the view.
+
+2. Follow SAPUI5 naming conventions for files and functions.
+
+3. Do not use hardcoded text in XML or controller. All texts must be stored in the i18n.properties file.
+
+4. The main UI layout must use IconTabBar.
+
+5. The first tab must contain a table showing employee data.
+
+6. The second tab must show a list of Panels.
+
+7. Each Panel header should display the employee name.
+
+8. Panel description should display complete employee information:
+   
+   - Employee ID
+   - Name
+   - Department
+   - Role
+   - Email
+
+9. Add filtering functionality to the table using SearchField.
+
+10. Add an Export button that converts the table JSON data into a CSV file.
+
+11. Create two separate fragments:
+
+- EmployeesTable.fragment.xml
+- EmployeePanels.fragment.xml
+
+12. When clicking a row in the table, navigate to an Employee Detail page and pass the Employee ID in the navigation route.
+
+13. The application must be mobile responsive:
+
+- On mobile screens, only Employee ID and Name columns should appear.
+- The remaining information should appear below the employee ID as pop-in.
+
+14. Use SAPUI5 routing in manifest.json to navigate between:
+
+- App view
+- EmployeeDetail view
+
+15. Provide complete code for:
+
+- App.view.xml
+- App.controller.js
+- EmployeesTable.fragment.xml
+- EmployeePanels.fragment.xml
+- EmployeeDetail.view.xml
+- manifest.json routing configuration
+- i18n.properties
+- sample employee JSON data
+
+16. Follow SAPUI5 best practices and ensure the code is production-ready.
+
+Also include the full project folder structure.
