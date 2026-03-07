@@ -172,46 +172,25 @@ Audio output working with Bluetooth earbuds
 xmlns="sap.m"
 xmlns:core="sap.ui.core">
 
-<Table items="{/employees}" mode="SingleSelectMaster">
-
-<headerToolbar>
-<Toolbar>
-<Title text="Employees"/>
-<ToolbarSpacer/>
-<Button text="Export CSV" press="onExport"/>
-</Toolbar>
-</headerToolbar>
-
-<columns>
-
-<Column>
-<Text text="Emp ID"/>
-</Column>
-
-<Column>
-<Text text="Name"/>
-</Column>
-
-<Column>
-<Text text="Department"/>
-</Column>
-
-</columns>
+<List items="{/employees}">
 
 <items>
 
-<ColumnListItem press="onRowPress">
+<CustomListItem>
 
-<cells>
-<Text text="{empId}"/>
-<Text text="{name}"/>
-<Text text="{department}"/>
-</cells>
+<Panel headerText="{name}">
 
-</ColumnListItem>
+<Text text="Employee ID: {empId}"/>
+<Text text="Department: {department}"/>
+<Text text="Role: {role}"/>
+<Text text="Email: {email}"/>
+
+</Panel>
+
+</CustomListItem>
 
 </items>
 
-</Table>
+</List>
 
 </core:FragmentDefinition>
