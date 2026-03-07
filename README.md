@@ -194,3 +194,48 @@ xmlns:core="sap.ui.core">
 </List>
 
 </core:FragmentDefinition>
+
+
+
+app.view
+
+
+<mvc:View
+controllerName="com.employee.employeeapp.controller.App"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+xmlns:core="sap.ui.core">
+
+<App>
+
+<Page title="Employee Application">
+
+<IconTabBar>
+
+<items>
+
+<IconTabFilter text="Employee Table">
+
+<core:Fragment
+fragmentName="com.employee.employeeapp.fragment.EmployeesTable"
+type="XML"/>
+
+</IconTabFilter>
+
+<IconTabFilter text="Employee Panels">
+
+<core:Fragment
+fragmentName="com.employee.employeeapp.fragment.EmployeePanels"
+type="XML"/>
+
+</IconTabFilter>
+
+</items>
+
+</IconTabBar>
+
+</Page>
+
+</App>
+
+</mvc:View>
