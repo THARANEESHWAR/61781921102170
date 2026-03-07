@@ -164,49 +164,6 @@ Backend running on FastAPI server
 Audio output working with Bluetooth earbuds
 
 
-sap.ui.define([
-"sap/ui/core/mvc/Controller",
-"sap/ui/model/json/JSONModel"
-], function (Controller, JSONModel) {
-"use strict";
-
-return Controller.extend("com.employee.employeeapp.controller.App", {
-
-onInit: function () {
-
-var oData = {
-employees: [
-{
-empId: "101",
-name: "John",
-department: "IT",
-role: "Developer",
-email: "john@test.com"
-},
-{
-empId: "102",
-name: "David",
-department: "HR",
-role: "Manager",
-email: "david@test.com"
-},
-{
-empId: "103",
-name: "Sara",
-department: "Finance",
-role: "Analyst",
-email: "sara@test.com"
-}
-]
-};
-
-var oModel = new JSONModel(oData);
-this.getView().setModel(oModel);
-
-}
-
-});
-});
 
 
 
