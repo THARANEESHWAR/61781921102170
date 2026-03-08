@@ -463,3 +463,82 @@ Please generate complete SAPUI5 code and modifications for the following:
 8. Follow SAPUI5 best practices and proper MVC structure.
 
 Also provide the exact code snippets and file structure changes needed to implement this feature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+new one
+
+
+
+
+You are a senior SAPUI5 / SAP Fiori developer.
+
+I have a SAPUI5 Freestyle application with namespace "com.employee.employeeapp".
+
+The application already contains:
+
+- MVC architecture
+- JSONModel with employee data
+- App.view.xml with IconTabBar
+- EmployeesTable.fragment.xml for table view
+- EmployeePanels.fragment.xml for employee panel view
+- Search filter
+- CSV export
+- Row click navigation
+
+Now improve the EmployeePanels.fragment.xml UI to make it look like a professional SAP Fiori card layout.
+
+Requirements:
+
+1. Replace the current list layout with sap.f.GridList to create a responsive grid.
+
+2. The grid must show two employee cards per row in mobile view (left-right layout).
+
+3. Each employee should be displayed as a card-style container.
+
+4. Each card should display:
+   
+   - Employee Name (Title)
+   - Employee ID
+   - Department
+   - Role
+   - Email
+
+5. Use the following UI5 controls:
+   
+   - sap.f.GridList
+   - sap.f.GridBoxLayout
+   - sap.m.CustomListItem
+   - sap.m.VBox
+   - sap.m.Title
+   - sap.m.Text
+   - sap.m.HBox
+
+6. Add SAPUI5 styling classes such as:
+   
+   - sapUiSmallMargin
+   - sapUiSmallPadding
+   - sapUiResponsiveMargin
+
+7. The layout should work for:
+   
+   - Desktop (multiple cards per row)
+   - Tablet (2 cards per row)
+   - Mobile (2 cards per row)
+
+8. Update only this file:
+   webapp/fragment/EmployeePanels.fragment.xml
+
+9. Provide the complete final XML code for this fragment.
+
+Follow SAPUI5 best practices and ensure the UI looks like a modern SAP Fiori application.
