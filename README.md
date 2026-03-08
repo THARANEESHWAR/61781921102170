@@ -407,3 +407,59 @@ Functional Requirements:
 16. Follow SAPUI5 best practices and ensure the code is production-ready.
 
 Also include the full project folder structure.
+
+
+
+
+
+new one 
+
+
+
+You are an expert SAPUI5 developer.
+
+I already have a SAPUI5 Freestyle application with the namespace "com.employee.employeeapp".
+
+The application already includes:
+
+- JSONModel with employee data
+- IconTabBar layout
+- EmployeesTable.fragment.xml containing a table
+- EmployeePanels.fragment.xml containing employee panels
+- Search filter and CSV export
+- MVC architecture
+
+Now implement Requirement 12:
+
+When clicking a row in the employee table, navigate to an Employee Detail page and pass the Employee ID.
+
+Please generate complete SAPUI5 code and modifications for the following:
+
+1. Create a new view:
+   webapp/view/EmployeeDetail.view.xml
+
+2. Create a controller:
+   webapp/controller/EmployeeDetail.controller.js
+
+3. Configure routing inside:
+   webapp/manifest.json
+
+4. Update the function "onRowPress()" in App.controller.js to navigate using:
+   this.getOwnerComponent().getRouter().navTo()
+
+5. Modify EmployeesTable.fragment.xml so that the table row uses:
+   press="onRowPress"
+
+6. The Employee Detail page should display:
+   
+   - Employee Name
+   - Employee ID
+   - Department
+   - Role
+   - Email
+
+7. Use ObjectHeader or VBox layout in the detail page.
+
+8. Follow SAPUI5 best practices and proper MVC structure.
+
+Also provide the exact code snippets and file structure changes needed to implement this feature.
