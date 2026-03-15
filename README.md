@@ -114,3 +114,32 @@ new_______________
    </edmx:DataServices>
 
 </edmx:Edmx>
+
+
+
+I have an SAP UI5/Fiori application where steps 1–12 are already completed. The application contains an Employee table, panels, navigation to employee detail, fragments, filters, export to CSV, and responsive behavior.
+
+Now I need to complete step 13.
+
+Please help me create a CAP (Cloud Application Programming) backend service and connect it to my UI5 application.
+
+Requirements:
+
+1. Create a CAP project using Node.js.
+2. Create an Employee entity with fields like empId, name, email, department, salary.
+3. Add sample employee data.
+4. Create an EmployeeService that exposes the Employees entity.
+5. The service should return employee data in OData format.
+6. Show the folder structure for db, srv, and data files.
+7. Provide the CDS files for schema and service.
+8. Show how to run the CAP server using cds watch.
+9. Show how to connect this CAP service to the UI5 application through manifest.json.
+10. Show how to bind the Employees entity to a SAPUI5 table.
+
+Please generate the full code needed for:
+
+- schema.cds
+- employee-service.cds
+- sample data
+- manifest.json configuration
+- UI5 table binding example.
