@@ -1,3 +1,43 @@
+
+
+
+
+
+
+
+
+
+
+In my SAP UI5 Freestyle app, the GET Employees API is triggered twice.
+
+Help me debug and fix this issue.
+
+Check:
+- onInit() function
+- Model binding in XML view
+- Any duplicate read() calls
+- Table binding (items aggregation)
+
+Provide corrected controller.js and XML code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
