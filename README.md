@@ -1,4 +1,12 @@
+Help me add XSUAA authentication in my SAP CAP project.
 
+I need:
+- xs-security.json with Display and Admin roles
+- Update mta.yaml if required
+- Add authorization checks in CDS service
+- Example of restricting entity access
+
+Project is Node.js CAP.
 
 
 
