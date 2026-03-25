@@ -1,3 +1,33 @@
+I have an existing SAP CAP (Node.js) + SAP UI5 Freestyle application.
+
+Project structure:
+
+- db/ → CDS schema
+- srv/ → CAP service (employee-service.cds)
+- app/employeeapp → UI5 frontend
+
+I have already added XSUAA configuration and authorization in CDS.
+
+Now I want to:
+
+1. Enable login popup locally using App Router
+2. Connect App Router with CAP backend
+3. Protect routes so authentication is required
+4. Simulate users (Display and Admin roles) locally
+5. Fix 403 Forbidden issue and ensure UI5 app loads after login
+
+Provide:
+
+- Complete approuter setup (package.json, xs-app.json)
+- How to connect CAP service to approuter
+- How to run both CAP and approuter together
+- How login popup works locally
+- How to test different users (displayUser, adminUser)
+
+Use best practices and show file-wise code changes.
+
+
+
 Help me add XSUAA authentication in my SAP CAP project.
 
 I need:
