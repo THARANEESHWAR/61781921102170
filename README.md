@@ -1,3 +1,23 @@
+In my SAP CAP project, I have an existing CDS service:
+
+service CatalogService {
+entity Employees as projection on db.Employees;
+}
+
+I want to extend this by adding a second service called "ManagerService" in the same file.
+
+Requirements:
+
+- ManagerService should expose the same Employees entity
+- Use projection on db.Employees
+- Do not break existing CatalogService
+- Optionally restrict ManagerService fields to: ID, name, department
+- Follow best practices for CAP CDS
+
+Generate the final complete service.cds file.
+
+
+
 I have an existing SAP CAP (Node.js) + SAP UI5 Freestyle application.
 
 Project structure:
