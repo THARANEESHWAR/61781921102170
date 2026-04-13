@@ -147,3 +147,34 @@ Also provide:
 
 - Sample test cases using QUnit or Jest
 - Expected outcomes for each test case
+
+
+
+
+,,    ,,, 
+We need to build a SAPUI5 Fiori application that enables users to search and filter product data efficiently.
+
+Business Requirement:
+Users should be able to quickly find products without manually scrolling through long lists. The application should provide real-time filtering as the user types in the search field.
+
+Functional Requirements:
+
+- Display product data in a responsive table (sap.m.Table)
+- Add a search field (sap.m.SearchField)
+- Implement live search functionality using onLiveChange event
+- Filter data based on Product Name and Product ID
+- Ensure fast and responsive filtering
+
+Technical Requirements:
+
+- Use SAPUI5 MVC architecture
+- Integrate with OData V2 service
+- Implement client-side filtering using filters
+- Bind data to table using OData model
+
+Provide:
+
+- High-level solution approach
+- UI design with search and table
+- Filtering logic explanation
+- Implementation steps
