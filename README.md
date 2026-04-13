@@ -1,3 +1,22 @@
+We need to build a SAP UI5 Fiori application to display material data in a table using OData V2 service.
+
+Requirements:
+
+- Display materials in a responsive table
+- Columns: Material ID, Name, Description, Price
+- Enable sorting and filtering
+- Use MVC architecture
+- Bind data using OData model
+
+The application should provide an intuitive interface for users to view material information.
+
+
+
+
+
+
+
+
 
 # Getting Started with Create React App
 
