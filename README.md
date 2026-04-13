@@ -115,3 +115,18 @@ Include:
 - Performance improvements
 - Error handling improvements
 - Clean and maintainable code structure
+
+
+
+Analyze the generated SAPUI5 application code and provide a clear summary.
+
+Include:
+
+- Overall purpose of the application
+- Explanation of XML View (UI structure)
+- Explanation of Controller logic
+- Description of manifest.json configuration
+- How OData V2 model is used
+- Data binding flow in the application
+
+Provide the summary in simple and understandable terms.
