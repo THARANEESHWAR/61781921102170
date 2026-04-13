@@ -130,3 +130,20 @@ Include:
 - Data binding flow in the application
 
 Provide the summary in simple and understandable terms.
+
+
+Analyze the SAPUI5 application code and generate technical unit test scenarios.
+
+Include:
+
+- Unit test cases for XML View and UI components
+- Controller function testing
+- OData service mocking and testing
+- Data binding validation
+- Error handling test cases
+- Positive and negative test scenarios
+
+Also provide:
+
+- Sample test cases using QUnit or Jest
+- Expected outcomes for each test case
