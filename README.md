@@ -11,7 +11,34 @@ Requirements:
 The application should provide an intuitive interface for users to view material information.
 
 
+Transcript – Business Discussion for Material Table Application
 
+Business Context:
+Users want to view material data in a structured way instead of raw backend data. They need a user-friendly interface to access material details.
+
+User Expectations:
+
+- Easy display of materials in a table
+- Ability to search and filter materials
+- Clean and responsive UI
+
+Functional Requirements:
+
+- Display material data using SAPUI5 table
+- Data should be fetched from OData V2 service
+- Columns: Material ID, Name, Description, Price
+- Enable sorting and filtering
+
+Technical Assumptions:
+
+- Application developed using SAPUI5 MVC architecture
+- OData V2 service used for backend integration
+- sap.m.Table used for UI
+
+UX Considerations:
+
+- Responsive design
+- Fast loading of data
 
 
 
