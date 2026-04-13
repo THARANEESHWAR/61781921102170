@@ -102,3 +102,16 @@ Include:
 - manifest.json with OData V2 configuration
 - Data binding for Material fields
 - Sample code for displaying material list
+
+
+
+
+Analyze the generated SAPUI5 code and provide improvements.
+
+Include:
+
+- Code optimization suggestions
+- Best practices for SAPUI5 development
+- Performance improvements
+- Error handling improvements
+- Clean and maintainable code structure
