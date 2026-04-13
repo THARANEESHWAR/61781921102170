@@ -90,3 +90,15 @@ Provide complete code including:
 - Controller (JavaScript)
 - manifest.json configuration
 - Proper data binding implementation
+
+
+
+Analyze the uploaded document and generate SAPUI5 application code.
+
+Include:
+
+- XML View with sap.m.Table
+- Controller logic (JavaScript)
+- manifest.json with OData V2 configuration
+- Data binding for Material fields
+- Sample code for displaying material list
