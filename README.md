@@ -171,3 +171,15 @@ Provide:
 - Data flow diagram explanation
 - UI5 artifacts (View, Controller, Model)
 - Integration details with OData service
+
+
+Analyze the uploaded business discussion document and generate a detailed Technical Design Document (OSD/TSD).
+
+Include:
+
+- Technical architecture (MVC)
+- SAPUI5 component structure
+- OData V2 integration details
+- UI5 controls used (sap.m.Table)
+- Data binding mechanism
+- End-to-end data flow
