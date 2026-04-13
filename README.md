@@ -74,3 +74,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ---------------------------------------------------------------------------------------------------------------------------
 
 
+We need to generate SAPUI5 application code for displaying material data using an OData V2 service.
+
+The application should:
+
+- Display materials in a responsive table (sap.m.Table)
+- Use MVC architecture
+- Bind data from OData model
+- Show fields: Material ID, Name, Description, Price
+- Support sorting and filtering
+
+Provide complete code including:
+
+- XML View
+- Controller (JavaScript)
+- manifest.json configuration
+- Proper data binding implementation
