@@ -1,0 +1,41 @@
+cat > webapp/manifest.json << 'EOF'
+{
+  "_version": "1.58.0",
+  "sap.app": {
+    "id": "com.po.approval",
+    "type": "application",
+    "title": "PO Approval App",
+    "applicationVersion": { "version": "1.0.0" }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": { "desktop": true, "tablet": true, "phone": true }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "com.po.approval.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "com.po.approval.view",
+        "controlId": "appNav",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        { "name": "list", "pattern": "", "target": "list" },
+        { "name": "detail", "pattern": "detail/{po_id}", "target": "detail" }
+      ],
+      "targets": {
+        "list": { "viewName": "List", "viewLevel": 1 },
+        "detail": { "viewName": "Detail", "viewLevel": 2 }
+      }
+    }
+  }
+}
+EOF
