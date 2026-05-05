@@ -1,61 +1,65 @@
-cat > webapp/controller/List.controller.js << 'EOF'
+cat > webapp/controller/Detail.controller.js << 'EOF'
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
-    "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
-], function (Controller, JSONModel, Filter, FilterOperator) {
+    "sap/m/MessageToast",
+    "sap/m/MessageBox"
+], function (Controller, JSONModel, MessageToast, MessageBox) {
     "use strict";
     const API = "http://localhost:8000";
-    return Controller.extend("com.po.approval.controller.List", {
+    return Controller.extend("com.po.approval.controller.Detail", {
         onInit: function () {
-            this.loadPOs();
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.getRoute("detail").attachPatternMatched(this.onRouteMatched, this);
         },
-        loadPOs: function () {
-            fetch(API + "/po")
+        onRouteMatched: function (oEvent) {
+            var poId = oEvent.getParameter("arguments").po_id;
+            this.loadPO(poId);
+        },
+        loadPO: function (poId) {
+            fetch(API + "/po/" + poId)
                 .then(r => r.json())
                 .then(data => {
-                    var model = new JSONModel({ orders: data });
+                    var model = new JSONModel(data);
                     this.getView().setModel(model, "poModel");
-                })
-                .catch(err => console.error("Error loading POs:", err));
+                    this.checkFraud(data);
+                });
         },
-        onItemPress: function (oEvent) {
-            var item = oEvent.getParameter("listItem");
-            var ctx = item.getBindingContext("poModel");
-            var poId = ctx.getProperty("po_id");
-            this.getOwnerComponent().getRouter()
-                .navTo("detail", { po_id: poId });
+        checkFraud: function (po) {
+            fetch(API + "/po/check", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(po)
+            })
+                .then(r => r.json())
+                .then(result => {
+                    var alert = this.byId("fraudAlert");
+                    if (result.is_flagged) {
+                        alert.setText("⚠️ ML Alert: " + result.message + " (anomaly score: " + result.anomaly_score + ")");
+                        alert.setVisible(true);
+                    }
+                });
         },
-        onSearch: function (oEvent) {
-            var query = oEvent.getParameter("query");
-            var list = this.byId("poList");
-            var binding = list.getBinding("items");
-            var filters = [];
-            if (query) {
-                filters.push(new Filter({
-                    filters: [
-                        new Filter("po_id", FilterOperator.Contains, query),
-                        new Filter("vendor", FilterOperator.Contains, query),
-                        new Filter("category", FilterOperator.Contains, query)
-                    ],
-                    and: false
-                }));
-            }
-            binding.filter(filters);
+        onApprove: function () {
+            var poId = this.getView().getModel("poModel").getProperty("/po_id");
+            fetch(API + "/po/" + poId + "/approve", { method: "PUT" })
+                .then(r => r.json())
+                .then(() => {
+                    MessageToast.show("PO Approved!");
+                    this.onNavBack();
+                });
         },
-        onFilterChange: function (oEvent) {
-            var key = oEvent.getParameter("selectedItem").getKey();
-            var list = this.byId("poList");
-            var binding = list.getBinding("items");
-            var filters = [];
-            if (key !== "All") {
-                filters.push(new Filter("status", FilterOperator.EQ, key));
-            }
-            binding.filter(filters);
+        onReject: function () {
+            var poId = this.getView().getModel("poModel").getProperty("/po_id");
+            fetch(API + "/po/" + poId + "/reject", { method: "PUT" })
+                .then(r => r.json())
+                .then(() => {
+                    MessageToast.show("PO Rejected!");
+                    this.onNavBack();
+                });
         },
-        onAnalyticsPress: function () {
-            this.getOwnerComponent().getRouter().navTo("analytics");
+        onNavBack: function () {
+            this.getOwnerComponent().getRouter().navTo("list");
         }
     });
 });
