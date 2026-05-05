@@ -1,0 +1,38 @@
+cat > webapp/view/List.view.xml << 'EOF'
+<mvc:View
+    controllerName="com.po.approval.controller.List"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Page title="Purchase Orders" showNavButton="false">
+        <headerContent>
+            <Button text="Analytics" icon="sap-icon://bar-chart" press=".onAnalyticsPress" type="Emphasized"/>
+        </headerContent>
+        <subHeader>
+            <Toolbar>
+                <SearchField placeholder="Search PO..." search=".onSearch" width="300px"/>
+                <ToolbarSpacer/>
+                <Select change=".onFilterChange" id="statusFilter">
+                    <core:Item key="All" text="All Status"/>
+                    <core:Item key="Pending" text="Pending"/>
+                    <core:Item key="Approved" text="Approved"/>
+                    <core:Item key="Rejected" text="Rejected"/>
+                </Select>
+            </Toolbar>
+        </subHeader>
+        <List
+            id="poList"
+            items="{poModel>/orders}"
+            mode="SingleSelectMaster"
+            selectionChange=".onItemPress"
+            growing="true"
+            growingThreshold="20">
+            <StandardListItem
+                title="{poModel>po_id} — {poModel>vendor}"
+                description="{poModel>category} | ₹{poModel>amount}"
+                info="{poModel>status}"
+                infoState="{= ${poModel>status} === 'Approved' ? 'Success' : ${poModel>status} === 'Rejected' ? 'Error' : 'Warning'}"/>
+        </List>
+    </Page>
+</mvc:View>
+EOF
