@@ -260,3 +260,37 @@ print(df.head())
 open('generate_data.py', 'w').write(content)
 print('File created successfully')
 "
+
+
+
+
+
+
+-----:::₹##₹₹^^^^;:#
+import pandas as pd
+from sklearn.ensemble import IsolationForest
+from sklearn.preprocessing import LabelEncoder
+import joblib
+
+df = pd.read_csv("po_data.csv")
+
+le = LabelEncoder()
+df["category_encoded"] = le.fit_transform(df["category"])
+
+X = df[["amount", "category_encoded"]]
+
+model = IsolationForest(contamination=0.05, random_state=42)
+model.fit(X)
+
+joblib.dump(model, "po_model.pkl")
+joblib.dump(le, "label_encoder.pkl")
+
+df["anomaly_score"] = model.decision_function(X)
+df["is_flagged"] = model.predict(X) == -1
+
+flagged = df[df["is_flagged"] == True]
+print(f"Model trained successfully!")
+print(f"Total POs: {len(df)}")
+print(f"Flagged suspicious POs: {len(flagged)}")
+print(f"\nSuspicious POs detected:")
+print(flagged[["po_id", "vendor", "category", "amount"]].to_string())
