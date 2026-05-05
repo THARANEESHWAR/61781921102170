@@ -230,7 +230,33 @@ Include:
 - User stories in "As a user, I want..." format
 - Acceptance criteria for each user story
 - Functional behavior for search and live filtering
-- Edge cases such as no results found and empty search input
-- Validation scenarios for user input
+‐--------------------
 
-Ensure the stories clearly describe search functionality, filtering logic, and table data display.
+python3 -c "
+content = '''import pandas as pd
+import random
+from faker import Faker
+
+fake = Faker()
+random.seed(42)
+
+vendors = [\"TechSupplies Ltd\", \"Office World\", \"GlobalParts Co\", \"FastShip Inc\", \"MegaVendor\"]
+categories = [\"IT Equipment\", \"Office Supplies\", \"Machinery\", \"Software\", \"Services\"]
+
+rows = []
+for i in range(200):
+    category = random.choice(categories)
+    base = {\"IT Equipment\": 50000, \"Office Supplies\": 5000, \"Machinery\": 120000, \"Software\": 30000, \"Services\": 20000}
+    amount = round(random.gauss(base[category], base[category] * 0.2), 2)
+    if i % 20 == 0:
+        amount = amount * random.uniform(4, 8)
+    rows.append({\"po_id\": f\"PO-{1000 + i}\", \"vendor\": random.choice(vendors), \"category\": category, \"amount\": abs(amount), \"description\": fake.sentence(nb_words=6), \"requestor\": fake.name(), \"status\": \"Pending\"})
+
+df = pd.DataFrame(rows)
+df.to_csv(\"po_data.csv\", index=False)
+print(f\"Generated {len(df)} purchase orders\")
+print(df.head())
+'''
+open('generate_data.py', 'w').write(content)
+print('File created successfully')
+"
